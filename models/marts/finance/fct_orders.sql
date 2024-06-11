@@ -1,6 +1,6 @@
 with orders as (select * from {{ ref('stg_jaffle_shop__orders') }}),
 
-payments as (select * from {{ ref('stg_jaffle_shop__payments') }}),
+payments as (select * from {{ ref('stg_stripe__payments') }}),
 
 order_payments as (
     select
